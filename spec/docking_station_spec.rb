@@ -36,7 +36,7 @@ describe DockingStation do
   end
 
   describe '#release_bike' do
-    it 'releases a bike' do
+    it 'releases a working bike' do
       bike = Bike.new
       subject.dock(bike)
       expect(subject.release_bike).to eq bike
@@ -54,5 +54,7 @@ describe DockingStation do
       expect{ docking_station.dock Bike.new }.to raise_error 'Dock full'
     end
   end
+
+
 
 end
